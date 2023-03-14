@@ -53,27 +53,6 @@ function changeCity(event) {
 let submitButton = document.querySelector("#submit");
 submitButton.addEventListener("click", changeCity);
 
-//Show Temp. of current location
-//function showLocationTemp() {
-// function getPosition(position) {
-//let lat = position.coords.latitude;
-//let long = position.coords.longitude;
-// let apiKey = "1b7bf581cf8af8c6c19fd4e49df2fbe3";
-// let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
-// axios.get(apiURL).then(showWeather);
-// }
-// navigator.geolocation.getCurrentPosition(getPosition);
-//}
-//let currentLocation = document.querySelector("#currentLocation");
-//currentLocation.addEventListener("click", showLocationTemp);
-
-// Change to feh
-//function changeFeh(response) {
-// response.preventDefault();
-//let todayTemp = document.querySelector("#todayTemp");
-//todayTemp.innerHTML = "66°f / 88°f";
-//}
-
 function changeFeh(response) {
   let newTemp = Math.round(response.data.main.temp);
   temp.innerHTML = `${newTemp}°F`;
@@ -87,15 +66,6 @@ function changeToFeh(event) {
 
 let fehTemp = document.querySelector("#fehUnit");
 fehTemp.addEventListener("click", changeToFeh);
-
-//Change to Cel
-//function changeCel(response) {
-//response.preventDefault();
-
-//axios.get(apiURL).then(showWeather);
-// let todayTemp = document.querySelector("#todayTemp");
-// todayTemp.innerHTML = Math.round(response.data.main.temp);
-//}
 
 let celTemp = document.querySelector("#celUnit");
 celTemp.addEventListener("click", changeCity);
