@@ -49,10 +49,10 @@ h4 {
   border-radius: 30px;
   padding: 20px 0;
   font-size: 20px;
-  border-color: rgb(90, 90, 245);
   background: rgb(90, 90, 245);
   box-shadow: 10px 10px 10px #ceccc9;
   color: white;
+  border: none;
 }
 #cityInput::placeholder {
   color: white;
@@ -88,6 +88,11 @@ button.tempUnit {
 button.tempUnit:hover {
   cursor: pointer;
   background: white;
+  color: red;
+}
+
+button.tempUnit:focus {
+  background-color: white;
   color: red;
 }
 

@@ -66,3 +66,36 @@ submitButton.addEventListener("click", changeCity);
 //}
 //let currentLocation = document.querySelector("#currentLocation");
 //currentLocation.addEventListener("click", showLocationTemp);
+
+// Change to feh
+//function changeFeh(response) {
+// response.preventDefault();
+//let todayTemp = document.querySelector("#todayTemp");
+//todayTemp.innerHTML = "66°f / 88°f";
+//}
+
+function changeFeh(response) {
+  let newTemp = Math.round(response.data.main.temp);
+  temp.innerHTML = newTemp;
+}
+
+function changeToFeh(event) {
+  event.preventDefault();
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=imperial`;
+  axios.get(apiURL).then(changeFeh);
+}
+
+let fehTemp = document.querySelector("#fehUnit");
+fehTemp.addEventListener("click", changeToFeh);
+
+//Change to Cel
+//function changeCel(response) {
+//response.preventDefault();
+
+//axios.get(apiURL).then(showWeather);
+// let todayTemp = document.querySelector("#todayTemp");
+// todayTemp.innerHTML = Math.round(response.data.main.temp);
+//}
+
+let celTemp = document.querySelector("#celUnit");
+celTemp.addEventListener("click", changeCity);
