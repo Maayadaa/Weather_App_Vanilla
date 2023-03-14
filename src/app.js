@@ -34,7 +34,7 @@ function showWeather(response) {
   let newIcon = response.data.weather[0].icon;
 
   city.innerHTML = response.data.name;
-  temp.innerHTML = newTemp;
+  temp.innerHTML = `${newTemp}°C`;
   description.innerHTML = newDescription;
   humidity.innerHTML = newHumidity;
   wind.innerHTML = newWind;
@@ -76,7 +76,7 @@ submitButton.addEventListener("click", changeCity);
 
 function changeFeh(response) {
   let newTemp = Math.round(response.data.main.temp);
-  temp.innerHTML = newTemp;
+  temp.innerHTML = `${newTemp}°F`;
 }
 
 function changeToFeh(event) {
