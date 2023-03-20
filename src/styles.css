@@ -18,7 +18,7 @@ p {
   margin: 2px;
 }
 
-.container {
+.subContainer {
   margin: 0 auto;
   display: block;
 }
@@ -110,7 +110,23 @@ input {
   font-size: 50px;
 }
 
-img {
+.icon {
   margin: 0 auto;
   display: block;
+}
+
+hr {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.forecastRow {
+  width: 100%;
+  text-align: center;
+}
+
+#maxTemp {
+  font-weight: 500;
 }
